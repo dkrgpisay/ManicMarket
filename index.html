@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport">
+	<title>Raisin Rush</title>
+
+	<!-- Bootstrap -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://fast.fonts.net/jsapi/35482bea-6adc-46fa-969a-6c676144f209.js"></script>
+	<script>
+		var isMobile = {
+			Android: function() {
+				return navigator.userAgent.match(/Android/i);
+			},
+			BlackBerry: function() {
+				return navigator.userAgent.match(/BlackBerry/i);
+			},
+			iOS: function() {
+				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+			},
+			Opera: function() {
+				return navigator.userAgent.match(/Opera Mini/i);
+			},
+			Windows: function() {
+				return navigator.userAgent.match(/IEMobile/i);
+			},
+			any: function() {
+				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+			}
+		}
+
+
+		$(document).ready( function() {
+//if on mobile and referred from Facebook
+if(isMobile.any()) {
+	if(document.URL.indexOf("facebook") > 0 ) {
+/*if( isMobile.iOS() ) {
+window.location.replace("https://itunes.apple.com/ph/app/kingdom-rush/id516378985?mt=8"); // REPLACE LINK FOR iOS
+}
+else */
+	if( isMobile.Android() ) {
+window.location.replace("https://play.google.com/store/apps/details?id=com.glu.dragonslayer"); // REPLACE LINK FOR ANDROID
+}
+// else location.replace = "http://google.com";
+}
+}
+});
+
+	</script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body style="">
+
+	<!-- Begin page content -->
+	<div id="top_content" class="container">
+		<div class="page-header">
+			<h1 id="logomanicmarket" class="img-responsive">Raisin Rush</h1>
+		</div>
+	</div> 	
+
+	<div id="mid_content" class="container">
+		<p class="lead">
+			Oh no! The Le Bon Apetit pantry is out of ingredients and we need to dish out star dishes for Gastrone the Food Critic.
+			Help Troy, the Kitchen Boy, complete all the ingredients for our dishes and save the restaurant’s most important review yet.
+		</p>
+		<a id="android-button" class='download-button' href="http://google.com">Link to Google Play Store</a>
+		<span id="ios-button" class='download-button soon' href="http://google.com">Link to Apple AppStore</span>
+	</div>
+
+	<div id="footer">
+		<div id='cart'></div>
+		<div class="container">
+			<a href='http://skillshotlabs.com/legal/eula.php' id='eula' class='footlinks'>EULA</a>
+			<a href='http://skillshotlabs.com/legal/mobile_privacy_policy.php' id='privpolicy' class='footlinks'>PRIVACY POLICY</a>
+		</div>
+	</div>
+
+	<div id='background'></div>
+</body> 
+
+</html>
